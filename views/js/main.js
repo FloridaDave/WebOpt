@@ -506,12 +506,16 @@ function updatePositions() {
   var items = document.getElementsByClassName('mover');
   var scrollTopCalc = document.body.scrollTop / 1250;  
 
-// Moved scrollTop calculation out of for loop (combined with scrollTopCalc added to line 512)
+// *** Moved scrollTop calculation out of for loop (combined with scrollTopCalc added to line 514). Strategy found on: 
+// https://engineering.gosquared.com/optimising-60fps-everywhere-in-javascript
+// which also conveys impact on the work flow. 
 
   for (var i = 0; i < items.length; i++) {
     var phase = Math.sin(scrollTopCalc + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
+
+  // console.log (Math.sin(scrollTopCalc + (i % 5)))
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
   // Super easy to create custom metrics.
@@ -530,7 +534,8 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-// changed number below from 200 to 25
+
+// *** Changed number below from 200 to 25
   for (var i = 0; i < 25; i++) {                
     var elem = document.createElement('img');
     elem.className = 'mover';
