@@ -504,12 +504,12 @@ function updatePositions() {
 //  Changed document.querySelectorAll to document.getElementByClassName
 
   var items = document.getElementsByClassName('mover');
-    calc = document.body.scrollTop / 1250;  
+  var scrollTopCalc = document.body.scrollTop / 1250;  
 
 // Moved scrollTop calculation out of for loop (combined with calc added to line 512)
 
   for (var i = 0; i < items.length; i++) {
-    var phase = Math.sin(calc + (i % 5));
+    var phase = Math.sin(scrollTopCalc + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
 
