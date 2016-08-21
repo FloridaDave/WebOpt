@@ -426,7 +426,7 @@ var resizePizzas = function(size) {
     var oldWidth = elem.offsetWidth;
 
     // Changed querySelector to getElementsByClassId
-    var windowWidth = document.getElementsByClassId("randomPizzas").offsetWidth;
+    var windowWidth = document.getElementsById("randomPizzas").offsetWidth;
     var oldSize = oldWidth / windowWidth;
 
     // Changes the slider value to a percent width
