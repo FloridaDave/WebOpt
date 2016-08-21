@@ -426,7 +426,7 @@ var resizePizzas = function(size) {
     var oldWidth = elem.offsetWidth;
 
     // Changed querySelector to getElementsByClassId
-    var windowWidth = document.getElementsById("randomPizzas").offsetWidth;
+    var windowWidth = document.getElementById("randomPizzas").offsetWidth;
     var oldSize = oldWidth / windowWidth;
 
     // Changes the slider value to a percent width
@@ -451,15 +451,14 @@ var resizePizzas = function(size) {
 
   // Iterates through pizza elements on the page and changes their widths
   // Put randomPizzaContainer into a variable as suggested and used the new variable name in the function.
-  var RPC = randomPizzaContainer;
+
+  var rpc = document.getElementsByClassName;
   function changePizzaSizes(size) {
-    for (var i = 0; i < document.RPC.length; i++) {
-      // var dx = determineDx(document.RPC[i], size);
-      // var newwidth = (document.RPC[i].offsetWidth + dx) + 'px';
-      document.RPC[i].style.width = newwidth;
+    for (var i = 0; i <RPC.length; i++) {
+      RPC[i].style.width = newwidth;
     }
-    var dx = determineDx(document.RPC[i], size);
-    var newwidth = (document.RPC[i].offsetWidth + dx) + 'px';
+    var dx = determineDx(RPC[i], size);
+    var newwidth = (RPC[i].offsetWidth + dx) + 'px';
   }
 
   changePizzaSizes(size);
