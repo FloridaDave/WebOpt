@@ -30,4 +30,7 @@ Changed var newwidth = (document.querySelectorAll to getElementsByClassName
 Changed querySelectorAll(".randomPizzaContainer")[i] to getElementsByClassName
 Pulled randomPizzaContainer out of 4 lines of code and created var RPC to use in each of the for lines. 
 Pulled the following lines of code out of the for loop an put them below the function because i is defined inside the loop. 
+Changed var RPC to = document.getElementsByClassName("randomPizzaContainer");
+Replaced previous lines (4) 'with getElementsByClassName("randomPizzaContainer")' with new var RPC
+Removed 'document.' before each 'RPC'
 
