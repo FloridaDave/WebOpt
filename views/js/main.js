@@ -451,15 +451,15 @@ var resizePizzas = function(size) {
 
   // Iterates through pizza elements on the page and changes their widths
   // Put randomPizzaContainer into a variable as suggested and used the new variable name in the function.
-  var RPC = randomPizzaContainer
-  var dx = determineDx(document.RPC[i], size);
-  var newwidth = (document.RPC[i].offsetWidth + dx) + 'px';
+  var RPC = randomPizzaContainer;
   function changePizzaSizes(size) {
     for (var i = 0; i < document.RPC.length; i++) {
       // var dx = determineDx(document.RPC[i], size);
       // var newwidth = (document.RPC[i].offsetWidth + dx) + 'px';
       document.RPC[i].style.width = newwidth;
     }
+    var dx = determineDx(document.RPC[i], size);
+    var newwidth = (document.RPC[i].offsetWidth + dx) + 'px';
   }
 
   changePizzaSizes(size);
