@@ -451,6 +451,7 @@ var resizePizzas = function(size) {
 
   // Iterates through pizza elements on the page and changes their widths
   // Put randomPizzaContainer into a variable as suggested and used the new variable name in the function.
+  // Moved var dx and var newwidth before newwidth in for loop.
 
   var RPC = document.getElementsByClassName("randomPizzaContainer");
   function changePizzaSizes(size) {
