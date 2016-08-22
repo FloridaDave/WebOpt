@@ -456,9 +456,9 @@ var resizePizzas = function(size) {
   function changePizzaSizes(size) {
     for (var i = 0; i <RPC.length; i++) {
       RPC[i].style.width = newwidth;
-    }
     var dx = determineDx(RPC[i], size);
     var newwidth = (RPC[i].offsetWidth + dx) + 'px';
+    }
   }
 
   changePizzaSizes(size);
