@@ -30,7 +30,10 @@ Changed var newwidth = (document.querySelectorAll to getElementsByClassName
 Changed querySelectorAll(".randomPizzaContainer")[i] to getElementsByClassName on all 4 lines.
 Replaced previous lines (4) 'with getElementsByClassName("randomPizzaContainer")' with new var RPC
 Removed 'document.' before each 'RPC'
-Pulled randomPizzaContainer out of 4 lines of code and created var RPC to use in each of the for lines. 
-Moved the following lines of code inside the for loop but before the newwidth line. (Tried moving them outside of loop for effency but the pizza slider stopped working, original position allowed all but the first pizza to resize (becasue newwidth was called before it was defined so the first itteration of the loop gave undefined. Placement in current postion solved all issues and the overall performance was well below project requirements).
+Pulled randomPizzaContainer out of 4 lines of code and created var RPC to use in each of the for lines.
+
+	*** Moved the following lines of code inside the for loop but before the newwidth line. (Tried moving them outside of loop for effency but the pizza slider stopped working, original position allowed all but the first pizza to resize (becasue newwidth was called before it was defined so the first itteration of the loop gave undefined. Placement in current postion solved all issues and the overall performance was well below project requirements).
+
+Found that the change mentioned above (with ***), was still causing too much time to be used to change the pizza image size so moved var dx and var newwidth above the loop but kept within the function. Also changed the [i] in var dx & var newwidth to 0. RPC is an array of all the pizza elements and all that's needed is one of those elements to determine the change of width and newwidth. Could have used 0, 1 or 2 but only one is needed for the calculation to work. 
 
 
