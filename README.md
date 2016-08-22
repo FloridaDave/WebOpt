@@ -27,10 +27,10 @@ Changed var windowWidth = document.querySelector to getElementsById
 Changed for (var i = 0; i < document.querySelectorAll to getElemantsByClassName
 Changed var dx = determineDx(document.querySelectorAll to getElementsByClassName
 Changed var newwidth = (document.querySelectorAll to getElementsByClassName
-Changed querySelectorAll(".randomPizzaContainer")[i] to getElementsByClassName
-Pulled randomPizzaContainer out of 4 lines of code and created var RPC to use in each of the for lines. 
-Pulled the following lines of code out of the for loop an put them below the function because i is defined inside the loop. 
-Changed var RPC to = document.getElementsByClassName("randomPizzaContainer");
+Changed querySelectorAll(".randomPizzaContainer")[i] to getElementsByClassName on all 4 lines.
 Replaced previous lines (4) 'with getElementsByClassName("randomPizzaContainer")' with new var RPC
 Removed 'document.' before each 'RPC'
+Pulled randomPizzaContainer out of 4 lines of code and created var RPC to use in each of the for lines. 
+Moved the following lines of code inside the for loop but before the newwidth line. (Tried moving them outside of loop for effency but the pizza slider stopped working, original position allowed all but the first pizza to resize (becasue newwidth was called before it was defined so the first itteration of the loop gave undefined. Placement in current postion solved all issues and the overall performance was well below project requirements).
+
 
